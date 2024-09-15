@@ -1,0 +1,8 @@
+Poin 1: **Branching di Git**  
+Branching adalah teknik yang memungkinkan pengembang membuat jalur pengembangan terpisah dalam proyek tanpa mempengaruhi kode utama (biasanya di branch *main* atau *master*). Dengan membuat branch baru, kita bisa mengerjakan fitur baru, perbaikan bug, atau eksperimen lainnya secara independen. Ini memastikan bahwa kode utama tetap stabil, sementara perubahan-perubahan tersebut dikembangkan secara terisolasi. Ketika perubahan sudah diuji dan dianggap matang, kita dapat menggabungkannya kembali ke branch utama.
+
+Poin 2: **Pull Request (PR)**  
+Pull Request adalah permintaan formal untuk menggabungkan perubahan dari satu branch ke branch lainnya, biasanya dari branch fitur ke branch utama. PR berfungsi sebagai alat kolaborasi yang memungkinkan anggota tim untuk meninjau, memberikan komentar, dan mendiskusikan perubahan sebelum mereka diintegrasikan ke dalam kode utama. Selain itu, PR memastikan bahwa kode yang diusulkan memenuhi standar kualitas dan tidak menyebabkan gangguan pada sistem sebelum diterapkan.
+
+Poin 3: **Merging dan Penyelesaian Konflik**  
+Merging adalah proses penyatuan perubahan dari satu branch ke branch lainnya. Ketika perubahan yang ada pada dua branch saling tumpang tindih (misalnya ketika dua pengembang mengedit bagian kode yang sama), konflik dapat muncul. Dalam situasi seperti ini, kita harus menyelesaikan konflik tersebut dengan meninjau perbedaan antara kedua versi, memilih perubahan mana yang harus dipertahankan, dan secara manual memperbaiki bagian kode yang bermasalah sebelum melanjutkan proses merge. Penyelesaian konflik ini penting untuk menjaga konsistensi dan stabilitas kode setelah penggabungan.
