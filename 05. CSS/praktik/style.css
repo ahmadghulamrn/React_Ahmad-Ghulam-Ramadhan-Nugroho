@@ -126,16 +126,16 @@ main section img {
 }
 
 
-/* Newsletter section */
+/* New section */
 
-.newsletter {
+.new {
     background-color: #f3f5fa;
     /* Updated as requested */
     text-align: center;
     padding: 50px 20px;
 }
 
-.newsletter h3 {
+.new h3 {
     font-size: 24px;
     font-weight: 600;
     line-height: 1;
@@ -143,7 +143,7 @@ main section img {
     margin-bottom: 16px;
 }
 
-.newsletter p {
+.new p {
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
@@ -151,7 +151,7 @@ main section img {
     margin-bottom: 30px;
 }
 
-.newsletter .input-container {
+.new .input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,7 +159,7 @@ main section img {
     margin: 0 auto;
 }
 
-.newsletter input[type="email"] {
+.new input[type="email"] {
     flex: 1;
     /* Mengisi ruang yang tersedia */
     height: 42.5px;
@@ -169,7 +169,7 @@ main section img {
     margin-bottom: 15px;
 }
 
-.newsletter button {
+.new button {
     height: 42.5px;
     border-radius: 0 25px 25px 0;
     background: #47b2e4;
@@ -184,7 +184,7 @@ main section img {
     transition: background-color 0.3s ease;
 }
 
-.newsletter button:hover {
+.new button:hover {
     background-color: #209dd8;
 }
 
@@ -311,26 +311,18 @@ footer {
         display: inline-block;
         margin-right: 20px;
     }
-    .newsletter .input-container {
+    .new .input-container {
         flex-direction: row;
         position: relative;
     }
-    .newsletter input[type="email"] {
+    .new input[type="email"] {
         flex: 1;
         margin-bottom: 0;
         padding-right: 150px;
     }
-    .newsletter input[type="email"]:hover {
+    .new input[type="email"]:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
-    /* .newsletter button {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: auto;
-        height: 42.5px;
-        padding: 0 28px;
-    } */
     .social-icons {
         justify-content: start;
     }
