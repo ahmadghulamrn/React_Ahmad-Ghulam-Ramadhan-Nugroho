@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distro Clothing Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        .bg-welcome {
+            background-image: url("https://images.unsplash.com/photo-1521334884684-d80222895322?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHN0cmVldHdlyWVyfGVufDB8fHx8MTY4MTAzNzA5NA&ixlib=rb-1.2.1&q=80&w=1920");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .flex-col-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .text-center-top {
+            text-align: center;
+            margin-top: -20%;
+            color: white;
+        }
+        
+        .header-bg {
+            background-color: #1a1a1a;
+        }
+        
+        .join-button {
+            background-color: #e63946;
+            color: white;
+        }
+        
+        .menu-item {
+            color: #e5e7eb;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        
+        .menu-item:hover {
+            color: #e63946;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-300">
+    <header class="header-bg p-1 shadow-md">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Logo" class="h-10 mr-2" />
+                <span class="text-1xl font-bold text-white">Distro Clothing Store</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="menu-item">Home</a></li>
+                    <li><a href="#" class="menu-item">Products</a></li>
+                    <li><a href="#" class="menu-item">About Us</a></li>
+                    <li><a href="#" class="menu-item">Contacts</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="#" class="text-gray-300 hover:text-red-500 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12v4m0 0v4m0-4h-8m8 0H8m8-4V8m0 4H8m8-4V4m0 4H8m8-4V4m0 4H8"/>
+                    </svg> Login
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex-col-center bg-welcome">
+        <h1 class="text-5xl font-bold mb-4 text-center-top">
+            WELCOME TO OUR STORE
+        </h1>
+        <p class="mb-6 text-white text-center">Explore the best in streetwear and unleash your style!</p>
+        <a href="#" class="join-button py-2 px-4 rounded hover:bg-orange-600">SHOP NOW</a>
+    </section>
+
+    <!-- Contact Us Section -->
+    <div class="container mx-auto my-10 p-5">
+        <h2 class="text-3xl font-bold mb-4 text-white">Contact Us</h2>
+        <p class="mb-4 text-gray-400">
+            Have a question or need help? Feel free to reach out through the form below.
+        </p>
+        <form id="contactForm" class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-400">Name</label>
+                <input type="text" id="username" name="username" required class="mt-1 block w-full border border-gray-700 bg-gray-800 rounded-md shadow-sm p-2 text-white" />
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-400">Email</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-700 bg-gray-800 rounded-md shadow-sm p-2 text-white" />
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-400">Message</label>
+                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-700 bg-gray-800 rounded-md shadow-sm p-2 text-white"></textarea>
+            </div>
+            <button type="submit" class="join-button py-2 px-4 rounded hover:bg-orange-600">Submit</button>
+        </form>
+
+        <div id="submittedData" class="mt-6 p-4 border border-gray-700 bg-gray-800 rounded-md hidden">
+            <h3 class="font-bold text-white">Submitted Data:</h3>
+            <p id="displayUsername" class="text-gray-300"></p>
+            <p id="displayEmail" class="text-gray-300"></p>
+            <p id="displayMessage" class="text-gray-300"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Display the submitted data
+            document.getElementById("displayUsername").innerText = `Name: ${username}`;
+            document.getElementById("displayEmail").innerText = `Email: ${email}`;
+            document.getElementById("displayMessage").innerText = `Message: ${message}`;
+
+            // Show the submitted data section
+            document.getElementById("submittedData").classList.remove("hidden");
+
+            // Reset the form
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body>
+
+</html>
