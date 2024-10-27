@@ -157,7 +157,7 @@ const Form = ({ onAddProduct, editingProduct, onSaveEdit }) => {
             </div>
 
             <div className='pb-10'>
-                <button onClick={handleClick} className='text-white bg-purple-500 border rounded-2xl px-4 py-2 my-4'>
+                <button onClick={handleClick} className='text-white bg-green-500 border rounded-2xl px-4 py-2 my-4'>
                     Click to get your lucky number!!
                 </button>
             </div>
