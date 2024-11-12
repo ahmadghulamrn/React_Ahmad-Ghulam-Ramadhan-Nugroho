@@ -1,0 +1,31 @@
+/* css/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background: #2a9d8f;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+img {
+    width: 50%;
+    /* Sesuaikan persentase sesuai kebutuhan */
+    max-width: 400px;
+    /* Batas maksimal agar gambar tidak terlalu besar */
+    height: auto;
+    /* Agar proporsi gambar tetap terjaga */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
